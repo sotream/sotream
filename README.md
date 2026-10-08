@@ -13,6 +13,7 @@ think and build instead.
 | ------- | ------------- |
 | [kafka-pay-lab](https://github.com/sotream/kafka-pay-lab) | Event-driven payments: transactional outbox, consumer lag, retries, dead-letter topic, circuit breaker, realtime dashboard. NestJS, Next.js, Kafka, PostgreSQL. |
 | [nest-next-starter](https://github.com/sotream/nest-next-starter) | Fullstack monorepo foundation: JWT with rotating refresh cookie, modular monolith, 9 ADRs, e2e tests on real Postgres and Redis, CI. |
+| [nest-next-aws-terraform](https://github.com/sotream/nest-next-aws-terraform) | Terraform on AWS for the starter: ECS Fargate, RDS, ElastiCache, ALB, GitHub OIDC CI/CD, ADRs and a cost estimate. Tested offline, not applied to a real account. |
 | [CodeSage](https://github.com/sotream/CodeSage) | RAG pipeline for questions about a codebase. Small modules, explicit trade-offs, ADRs. Python. |
 | [nomad-coverage-check](https://github.com/sotream/nomad-coverage-check) | Small React and GraphQL app built with Claude Code from a written spec and plan. |
 
@@ -24,7 +25,7 @@ think and build instead.
 
 ## Stack
 
-TypeScript, Node.js, NestJS, Next.js, React, Vue, PostgreSQL, Redis, Kafka, Docker, AWS, GitHub Actions. Python for tooling and ML experiments.
+TypeScript, Node.js, NestJS, Next.js, React, Vue, PostgreSQL, Redis, Kafka, Docker, AWS, GitHub Actions. Terraform for AWS. Python for tooling.
 
 ## Contact
 
