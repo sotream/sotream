@@ -3,9 +3,25 @@
 Senior fullstack and backend engineer in Hamburg, Germany. I build TypeScript systems end to end (NestJS,
 Next.js, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later.
 
-Production work: architecture and delivery of a digital claims platform, and backend services for a
-crypto exchange serving 15M+ users. That work is under NDA, so the public repositories below show how I
-think and build instead.
+## Experience at a glance
+
+9+ years building production web systems in crypto, claims management and edtech. Before that, nine years of
+third-line production support in banking, which is why I care about reliability, incident response and observability.
+
+- Claims management: co-owned the architecture and delivery of a digital claims-reporting portal (NestJS,
+  PostgreSQL, Vue 3 and Nuxt, 40+ backend modules, a shared component library) and its access control across API
+  and UI: roles, feature flags and subscriptions.
+- Cut AWS infrastructure costs by 25% through better provisioning and scaling, with observability across the stack
+  (Sentry, CloudWatch, Prometheus, Grafana, PostHog).
+- Reduced the OCR time per document from about 30 s to 10-15 s (up to 67%).
+- Crypto exchange (15M+ registered users): designed and built three core NestJS microservices and cut the number of
+  on-chain transactions per operation from 10-15 to 2-4.
+- Edtech: grew from engineer to lead and architect of an in-house learning platform; led three client engagements,
+  mentored client teams and trained three developer teams.
+
+Production code is under NDA, so the public repositories below show how I think and build instead.
+
+Languages: English, German, Ukrainian.
 
 ## Public work
 
