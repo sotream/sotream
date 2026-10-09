@@ -16,8 +16,9 @@ third-line production support in banking, which is why I care about reliability,
 - Cut AWS infrastructure costs by 25% through better provisioning and scaling, with observability across the stack
   (Sentry, CloudWatch, Prometheus, Grafana, PostHog).
 - Reduced the OCR time per document from about 30 s to 10-15 s (up to 67%).
-- Crypto exchange (15M+ registered users): designed and built three core NestJS microservices and cut the number of
-  on-chain transactions per operation from 10-15 to 2-4.
+- Crypto exchange (15M+ registered users): designed and built three core NestJS microservices, and optimised
+  transaction compression so one operation needs 2-4 on-chain transactions instead of 10-15 (roughly 70-80% fewer),
+  which lowered infrastructure and network costs.
 - Edtech: grew from engineer to lead and architect of an in-house learning platform; led three client engagements,
   mentored client teams and trained three developer teams.
 
