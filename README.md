@@ -38,6 +38,8 @@ Languages: English, German, Ukrainian.
 
 ## How I work
 
+- Start from the user problem and what success looks like, then ship in small steps behind feature flags, so risk
+  stays low and feedback comes early.
 - Write down decisions as ADRs, with the trade-offs I accepted.
 - Test the behaviour, not only the types: e2e against real infrastructure where it matters.
 - Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
