@@ -1,7 +1,8 @@
 # Andrii Prisniak
 
 Senior fullstack and backend engineer in Hamburg, Germany. I build TypeScript systems end to end (NestJS,
-Next.js, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later.
+Next.js, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own features from idea to production: shaping the
+problem, design, implementation, tests, CI and release, and observability once it is live.
 
 ## Experience at a glance
 
