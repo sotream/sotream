@@ -1,8 +1,9 @@
 # Andrii Prisniak
 
-Senior fullstack and backend engineer in Hamburg, Germany. I build TypeScript systems end to end (NestJS,
-Next.js, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own features from idea to production: shaping the
-problem, design, implementation, tests, CI and release, and observability once it is live.
+Senior fullstack and backend engineer in Hamburg, Germany. I build TypeScript systems end to end (NestJS, Next.js,
+Nuxt, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own features
+from idea to production: shaping the problem, design, implementation, tests, CI and release, and observability once
+it is live.
 
 ## Experience at a glance
 
@@ -38,11 +39,15 @@ Languages: English, German, Ukrainian.
 
 - Write down decisions as ADRs, with the trade-offs I accepted.
 - Test the behaviour, not only the types: e2e against real infrastructure where it matters.
+- Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
+  least-privilege database roles, a strict content security policy.
+- Lead through review, mentoring and written documentation, not only through code.
 - Use Claude Code daily, with rules, reviewers and a verify step; I make the design decisions and review the code.
 
 ## Stack
 
-TypeScript, Node.js, NestJS, Next.js, React, Vue, PostgreSQL, Redis, Kafka, Docker, AWS, GitHub Actions. Terraform for AWS. Python for tooling.
+TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, Kafka, Docker, Terraform, AWS,
+GitHub Actions, Playwright, Vitest. Python for tooling.
 
 ## Contact
 
