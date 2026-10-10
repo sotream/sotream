@@ -35,6 +35,7 @@ Languages: English, German, Ukrainian.
 | [nest-next-aws-terraform](https://github.com/sotream/nest-next-aws-terraform) | Terraform on AWS for the starter: ECS Fargate, RDS, ElastiCache, ALB, GitHub OIDC CI/CD, ADRs and a cost estimate. Tested offline, not applied to a real account.                                                                                                                                             |
 | [nuxt-flagboard](https://github.com/sotream/nuxt-flagboard)                   | Feature-flag service: NestJS API, Nuxt 4 admin UI with its own visual identity and self-hosted fonts, deterministic percentage rollouts, targeting rules, a readable audit log, live updates and a typed SDK. 13 ADRs, API tests on real PostgreSQL, browser tests with an accessibility scan in both themes. |
 | [CodeSage](https://github.com/sotream/CodeSage)                               | RAG pipeline for questions about a codebase, with a measured retrieval eval (hit-rate@k, MRR) and incremental indexing. Small modules, explicit trade-offs, ADRs. Python.                                                                                                                                     |
+| [agent-lab](https://github.com/sotream/agent-lab)                             | A small agent built from scratch on local models: tool calling, MCP, guardrails enforced in code, OpenTelemetry tracing and an eval suite with honest results. TypeScript.                                                                                                                                    |
 
 ## How I work
 
@@ -45,7 +46,7 @@ Languages: English, German, Ukrainian.
 - Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
   least-privilege database roles, a strict content security policy.
 - Lead through review, mentoring and written documentation, not only through code.
-- Use Claude Code daily, with rules, reviewers and a verify step; I make the design decisions and review the code.
+- Use Claude Code daily, with rules, reviewers and a verify step; I make the design decisions and review the code. I also build agents myself (agent-lab): tool boundaries, guardrails, tracing and evals.
 
 ## Stack
 
