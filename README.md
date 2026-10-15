@@ -45,7 +45,29 @@ Languages: English, German, Ukrainian.
 - Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
   least-privilege database roles, a strict content security policy.
 - Lead through review, mentoring and written documentation, not only through code.
-- Use Claude Code daily, with rules, reviewers and a verify step; I make the design decisions and review the code.
+- Work spec first: a written specification with concrete scenarios and explicit non-goals, approved by me before
+  any code exists, then a plan, then agents implement it test first.
+- Agents write the code and checks that do not trust the agent verify it: types, tests and CI, an independent
+  validator where one exists, and my own review of every change.
+
+## Spec-driven development with agents
+
+I use Claude Code the way I would manage a team: the thinking happens before the code.
+
+1. **Spec.** Requirements written as scenarios (when this happens, then that), with limits and non-goals spelled out.
+   I approve it; nothing is built from a spec I have not read.
+2. **Plan.** Small tasks, each with its tests, the constraints that apply everywhere, and a list of the failure modes
+   the spec implies but no test names yet.
+3. **Build.** An agent implements one task at a time, test first, one commit per task.
+4. **Verify without trusting the agent.** Types, tests and CI, plus an independent check where one exists. On a recent
+   library project (not public yet) that was the official validator of the German e-invoicing standard and its example
+   invoices: they caught a mistake in my own spec that the agent's tests could not, because those tests followed the
+   same spec.
+5. **Review and decide.** I read the result and make the decisions the spec left open. An agent's "done" is a claim,
+   not evidence.
+
+What I took from it: mistakes in the spec cost more than mistakes in the code; an agent's report about itself is not
+proof (a mechanical check found what an agent had reported as fixed); and the decisions that matter stay with a person.
 
 ## Stack
 
