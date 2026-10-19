@@ -63,7 +63,8 @@ I use Claude Code the way I would manage a team: the thinking happens before the
 4. **Verify without trusting the agent.** Types, tests and CI, plus an independent check where one exists. On a recent
    library project (not public yet) that was the official validator of the German e-invoicing standard and its example
    invoices: they caught a mistake in my own spec that the agent's tests could not, because those tests followed the
-   same spec.
+   same spec. A public example is [access-control-lab](https://github.com/sotream/access-control-lab): an
+   11-stage plan where each stage had to pass CI, a black-box attack suite and my own checks before it was merged.
 5. **Review and decide.** I read the result and make the decisions the spec left open. An agent's "done" is a claim,
    not evidence.
 
