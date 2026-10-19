@@ -30,11 +30,12 @@ Languages: English, German, Ukrainian.
 
 | Project                                                                       | What it shows                                                                                                                                                                                                                                                                                                 |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [access-control-lab](https://github.com/sotream/access-control-lab)           | Security-first case-file vault: OIDC with PKCE through a server-side BFF with encrypted sessions, RBAC plus ABAC with default deny and separation of duties, Postgres row-level security, a hash-chained audit log with a verifier, and 63 black-box attack tests in CI. NestJS, Next.js, Keycloak.           |
 | [kafka-pay-lab](https://github.com/sotream/kafka-pay-lab)                     | Event-driven payments: transactional outbox, consumer lag, retries, dead-letter topic, circuit breaker, realtime dashboard. One payment traced end to end with OpenTelemetry, Prometheus and Grafana. NestJS, Next.js, Kafka, PostgreSQL.                                                                     |
-| [nest-next-starter](https://github.com/sotream/nest-next-starter)             | Fullstack monorepo foundation: JWT with rotating refresh cookie, modular monolith, 10 ADRs, e2e tests on real Postgres and Redis, CI.                                                                                                                                                                          |
-| [nest-next-aws-terraform](https://github.com/sotream/nest-next-aws-terraform) | Terraform on AWS for the starter: ECS Fargate, RDS, ElastiCache, ALB, GitHub OIDC CI/CD, ADRs and a cost estimate. Tested offline, not applied to a real account.                                                                                                                                             |
 | [nuxt-flagboard](https://github.com/sotream/nuxt-flagboard)                   | Feature-flag service: NestJS API, Nuxt 4 admin UI with its own visual identity and self-hosted fonts, deterministic percentage rollouts, targeting rules, a readable audit log, live updates and a typed SDK. 14 ADRs, API tests on real PostgreSQL, browser tests with an accessibility scan in both themes. |
 | [CodeSage](https://github.com/sotream/CodeSage)                               | RAG pipeline for questions about a codebase, with a measured retrieval eval (hit-rate@k, MRR) and incremental indexing. Small modules, explicit trade-offs, ADRs. Python.                                                                                                                                     |
+| [nest-next-starter](https://github.com/sotream/nest-next-starter)             | Fullstack monorepo foundation: JWT with rotating refresh cookie, modular monolith, 10 ADRs, e2e tests on real Postgres and Redis, CI.                                                                                                                                                                         |
+| [nest-next-aws-terraform](https://github.com/sotream/nest-next-aws-terraform) | Terraform on AWS for the starter: ECS Fargate, RDS, ElastiCache, ALB, GitHub OIDC CI/CD, ADRs and a cost estimate. Tested offline, not applied to a real account.                                                                                                                                             |
 
 ## How I work
 
@@ -71,8 +72,8 @@ proof (a mechanical check found what an agent had reported as fixed); and the de
 
 ## Stack
 
-TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, Kafka, Docker, Terraform, AWS,
-GitHub Actions, Playwright, Vitest. Python for tooling.
+TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, Kafka, OAuth2/OIDC, Keycloak,
+Docker, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
 
 ## Contact
 
