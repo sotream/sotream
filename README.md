@@ -72,8 +72,8 @@ proof (a mechanical check found what an agent had reported as fixed); and the de
 
 ## Stack
 
-TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, Kafka, OAuth2/OIDC, Keycloak,
-Docker, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
+TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, BullMQ, Kafka, OAuth2/OIDC,
+Keycloak, Docker, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
 
 ## Contact
 
