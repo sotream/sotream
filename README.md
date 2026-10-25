@@ -1,30 +1,32 @@
 # Andrii Prisniak
 
-Senior fullstack and backend engineer in Hamburg, Germany. I build TypeScript systems end to end (NestJS, Next.js,
-Nuxt, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own features
-from idea to production: shaping the problem, design, implementation, tests, CI and release, and observability once
-it is live.
+Senior Software Engineer (Backend / Full-Stack) in Hamburg, Germany. I build TypeScript systems end to end (NestJS,
+Next.js, Nuxt, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own
+features from idea to production: shaping the problem, design, implementation, tests, CI and release, and
+observability once it is live.
 
 ## Experience at a glance
 
-9+ years building production web systems in crypto, claims management and edtech. Before that, nine years of
+9+ years building production web systems in crypto, claims management and edtech. Before that, almost nine years of
 third-line production support in banking, which is why I care about reliability, incident response and observability.
 
-- Claims management: co-owned the architecture and delivery of a digital claims-reporting portal (NestJS,
-  PostgreSQL, Vue 3 and Nuxt, 40+ backend modules, a shared component library) and its access control across API
-  and UI: roles, feature flags and subscriptions.
-- Cut AWS infrastructure costs by 25% through better provisioning and scaling.
-- Built observability across the stack: Sentry, CloudWatch, Prometheus, Grafana and PostHog.
-- Reduced the document recognition time (OCR) from about 30 s to 10-15 s per document (up to 67%).
+- Claims management: shared responsibility for the architecture and delivery of a digital claims-reporting portal
+  (NestJS, PostgreSQL, Vue 3 and Nuxt, 40+ backend modules, a shared component library) and its access control across
+  API and UI: roles, feature flags and subscriptions.
+- Cut AWS infrastructure costs by 25% through better provisioning and scaling with Terraform.
+- Built observability across the stack (Sentry, CloudWatch, Prometheus, Grafana) and product analytics with PostHog.
+- Reduced the document recognition time (OCR) from about 30 s to 10–15 s per document (2–3x faster).
 - Crypto exchange (15M+ registered users): designed and built three core NestJS microservices. Optimised transaction
-  compression, so one operation now needs 2-4 on-chain transactions instead of 10-15, which lowered infrastructure and
+  compression, so one operation now needs 2–4 on-chain transactions instead of 10–15, which lowered infrastructure and
   network costs.
-- Edtech: grew from engineer to lead and architect of an in-house learning platform; led three client engagements,
-  mentored client teams and trained three developer teams.
+- Edtech: grew from engineer to lead and architect of an in-house learning platform; mentored three client developer
+  teams at a major internet provider: training curricula, hands-on workshops and technical delivery.
 
 Production code is under NDA, so the public repositories below show how I think and build instead.
 
-Languages: English, German, Ukrainian.
+Languages: English (C1), German (B2), Ukrainian (native).
+
+Open to roles starting January 2027, in Hamburg or remote within Germany.
 
 ## Public work
 
@@ -46,10 +48,6 @@ Languages: English, German, Ukrainian.
 - Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
   least-privilege database roles, a strict content security policy.
 - Lead through review, mentoring and written documentation, not only through code.
-- Work spec first: a written specification with concrete scenarios and explicit non-goals, approved by me before
-  any code exists, then a plan, then agents implement it test first.
-- Agents write the code and checks that do not trust the agent verify it: types, tests and CI, an independent
-  validator where one exists, and my own review of every change.
 
 ## Spec-driven development with agents
 
@@ -73,8 +71,8 @@ proof (a mechanical check found what an agent had reported as fixed); and the de
 
 ## Stack
 
-TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, BullMQ, Kafka, OAuth2/OIDC,
-Keycloak, Docker, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
+TypeScript, Node.js, NestJS, GraphQL, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, BullMQ, RabbitMQ, Kafka,
+OAuth2/OIDC, Keycloak, Docker, Kubernetes, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
 
 ## Contact
 
