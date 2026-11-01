@@ -1,79 +1,26 @@
 # Andrii Prisniak
 
-Senior Software Engineer (Backend / Full-Stack) in Hamburg, Germany. I build TypeScript systems end to end (NestJS,
-Next.js, Nuxt, React, Vue, PostgreSQL, AWS) and care most about the decisions that still hold up a year later. I own
-features from idea to production: shaping the problem, design, implementation, tests, CI and release, and
-observability once it is live.
+Senior Software Engineer (Fullstack, backend focused), Hamburg, Germany.
 
-## Experience at a glance
+Backend first: Node.js, TypeScript, NestJS, PostgreSQL and AWS, with Vue and React on the frontend. 9+ years in
+web development. I use AI tools (Claude Code) in daily work: the projects below were built with AI assistance, and
+design decisions are written down as ADRs where available.
 
-9+ years building production web systems in crypto, claims management and edtech. Before that, almost nine years of
-third-line production support in banking, which is why I care about reliability, incident response and observability.
+## Selected projects
 
-- Claims management: shared responsibility for the architecture and delivery of a digital claims-reporting portal
-  (NestJS, PostgreSQL, Vue 3 and Nuxt, 40+ backend modules, a shared component library) and its access control across
-  API and UI: roles, feature flags and subscriptions.
-- Cut AWS infrastructure costs by 25% through better provisioning and scaling with Terraform.
-- Built observability across the stack (Sentry, CloudWatch, Prometheus, Grafana) and product analytics with PostHog.
-- Reduced the document recognition time (OCR) from about 30 s to 10–15 s per document (2–3x faster).
-- Crypto exchange (15M+ registered users): designed and built three core NestJS microservices. Optimised transaction
-  compression, so one operation now needs 2–4 on-chain transactions instead of 10–15, which lowered infrastructure and
-  network costs.
-- Edtech: grew from engineer to lead and architect of an in-house learning platform; mentored three client developer
-  teams at a major internet provider: training curricula, hands-on workshops and technical delivery.
-
-Production code is under NDA, so the public repositories below show how I think and build instead.
-
-Languages: English (C1), German (B2), Ukrainian (native).
-
-Open to roles starting January 2027, in Hamburg or remote within Germany.
-
-## Public work
-
-| Project                                                                       | What it shows                                                                                                                                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [access-control-lab](https://github.com/sotream/access-control-lab)           | Security-first case-file vault: OIDC with PKCE through a server-side BFF with encrypted sessions, RBAC plus ABAC with default deny and separation of duties, Postgres row-level security, a hash-chained audit log with a verifier, and 63 black-box attack tests in CI, 26 ADRs. NestJS, Next.js, Keycloak.  |
-| [kafka-pay-lab](https://github.com/sotream/kafka-pay-lab)                     | Event-driven payments: transactional outbox, consumer lag, retries, dead-letter topic, circuit breaker, realtime dashboard. One payment traced end to end with OpenTelemetry, Prometheus and Grafana. NestJS, Next.js, Kafka, PostgreSQL.                                                                     |
-| [nuxt-flagboard](https://github.com/sotream/nuxt-flagboard)                   | Feature-flag service: NestJS API, Nuxt 4 admin UI with its own visual identity and self-hosted fonts, deterministic percentage rollouts, targeting rules, a readable audit log, live updates and a typed SDK. 14 ADRs, API tests on real PostgreSQL, browser tests with an accessibility scan in both themes. |
-| [CodeSage](https://github.com/sotream/CodeSage)                               | RAG pipeline for questions about a codebase, with a measured retrieval eval (hit-rate@k, MRR) and incremental indexing. Small modules, explicit trade-offs, ADRs. Python.                                                                                                                                     |
-| [nest-next-starter](https://github.com/sotream/nest-next-starter)             | Fullstack monorepo foundation: JWT with rotating refresh cookie, modular monolith, 10 ADRs, e2e tests on real Postgres and Redis, CI.                                                                                                                                                                         |
-| [nest-next-aws-terraform](https://github.com/sotream/nest-next-aws-terraform) | Terraform on AWS for the starter: ECS Fargate, RDS, ElastiCache, ALB, GitHub OIDC CI/CD, ADRs and a cost estimate. Tested offline, not applied to a real account.                                                                                                                                             |
-
-## How I work
-
-- Start from the user problem and what success looks like, then ship in small steps behind feature flags, so risk
-  stays low and feedback comes early.
-- Write down decisions as ADRs, with the trade-offs I accepted.
-- Test the behaviour, not only the types: e2e against real infrastructure where it matters.
-- Treat security and the supply chain as part of the design: pinned CI actions and images, secret scanning,
-  least-privilege database roles, a strict content security policy.
-- Lead through review, mentoring and written documentation, not only through code.
-
-## Spec-driven development with agents
-
-I use Claude Code the way I would manage a team: the thinking happens before the code.
-
-1. **Spec.** Requirements written as scenarios (when this happens, then that), with limits and non-goals spelled out.
-   I approve it; nothing is built from a spec I have not read.
-2. **Plan.** Small tasks, each with its tests, the constraints that apply everywhere, and a list of the failure modes
-   the spec implies but no test names yet.
-3. **Build.** An agent implements one task at a time, test first, one commit per task.
-4. **Verify without trusting the agent.** Types, tests and CI, plus an independent check where one exists. On a recent
-   library project (not public yet) that was the official validator of the German e-invoicing standard and its example
-   invoices: they caught a mistake in my own spec that the agent's tests could not, because those tests followed the
-   same spec. A public example is [access-control-lab](https://github.com/sotream/access-control-lab): an
-   11-stage plan where each stage had to pass CI, a black-box attack suite and my own checks before it was merged.
-5. **Review and decide.** I read the result and make the decisions the spec left open. An agent's "done" is a claim,
-   not evidence.
-
-What I took from it: mistakes in the spec cost more than mistakes in the code; an agent's report about itself is not
-proof (a mechanical check found what an agent had reported as fixed); and the decisions that matter stay with a person.
+| Project | What it is | Status |
+| ------- | ---------- | ------ |
+| [Access Control Lab](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. | Lab project, not production |
+| [Kafka Pay Lab](https://github.com/sotream/kafka-pay-lab) | Learning stand for Kafka: transactional outbox, idempotency keys, circuit breaker, dead-letter topic, consumer lag, OpenTelemetry tracing. | Lab project, not production |
+| [Flagboard](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4. | Portfolio project, not deployed |
+| [CodeSage](https://github.com/sotream/CodeSage) | RAG for Python code: AST chunking, local embeddings, incremental indexing, retrieval eval (hit-rate@k, MRR). | Early stage |
+| Agent Lab | Agent loop, MCP server and client, own agent evals. | Private, code on request |
 
 ## Stack
 
-TypeScript, Node.js, NestJS, GraphQL, Next.js, Nuxt, React, Vue, Tailwind, PostgreSQL, Redis, BullMQ, RabbitMQ, Kafka,
-OAuth2/OIDC, Keycloak, Docker, Kubernetes, Terraform, AWS, GitHub Actions, Playwright, Vitest. Python for tooling.
+TypeScript, Node.js, NestJS, Next.js, Nuxt, React, Vue, PostgreSQL, Redis, Docker, Terraform, AWS, GitHub Actions,
+Playwright, Vitest. Kafka and OpenTelemetry in side projects. Python for tooling.
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/andrii-prisniak)
+[LinkedIn](https://www.linkedin.com/in/andrii-prisniak/)
