@@ -1,22 +1,56 @@
 <h1 align="center">Andrii Prisniak</h1>
 
 <p align="center">
-  <b>Senior Software Engineer</b> · Fullstack, backend focused<br>
-  Hamburg, Germany · <a href="https://www.linkedin.com/in/andrii-prisniak/">LinkedIn</a>
+  <b>Senior Software Engineer</b> · Backend focused, full-stack · Claims-management SaaS
 </p>
 
-Backend first: **Node.js, TypeScript, NestJS, PostgreSQL**, with Vue and React frontends and AWS infrastructure.
-9+ years of production web applications in claims management, crypto trading and online learning, after almost nine
-years of third-line production support in banking. I own features from the first idea to release and use AI
-tools (Claude Code) in everyday engineering.
+<p align="center">
+  <img alt="Open to Senior Backend / Full-Stack roles" src="https://img.shields.io/badge/Open%20to-Senior%20Backend%20%2F%20Full--Stack%20roles-2ea44f?style=flat-square">
+  <img alt="Hamburg or remote in Germany" src="https://img.shields.io/badge/Hamburg-or%20remote%20in%20Germany-555?style=flat-square">
+  <a href="https://www.linkedin.com/in/andrii-prisniak/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Andrii%20Prisniak-0A66C2?style=flat-square"></a>
+</p>
 
-## What I have built
+<p align="center">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img alt="NestJS" src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img alt="AWS" src="https://img.shields.io/badge/AWS-232F3E?style=flat-square">
+  <img alt="Vue" src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white">
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB">
+</p>
+
+## What I'm looking for
+
+A **Senior Software Engineer** role (backend, full-stack or product engineering) in a product company,
+in Hamburg or remote within Germany.
+
+I want the next role to make me a stronger engineer, not just give me a new title:
+
+- **Deeper backend work:** distributed and event-driven systems, data, reliability under real load.
+- **System-level decisions:** owning the design of services, on the way to a Staff or architect role
+  as an individual contributor.
+- **LLM features in the product,** not only in my own workflow.
+- **A strong team:** engineers I can learn from, honest code review, decisions written down.
+
+Fintech, insurtech and regulated domains are close to my experience, but the problem and the team
+matter more to me than the domain.
+
+## What I bring
+
+9+ years of production web applications in claims management, crypto trading and online learning.
+Before that, nine years of third-line production support at two banks in Ukraine (payment systems,
+SWIFT, Bloomberg, Reuters): incident analysis, configuration and access rights on systems that must
+not go down. That is where my habits around reliability and observability come from.
+
+Backend first: **Node.js, TypeScript, NestJS, PostgreSQL**, with Vue and React frontends on AWS. I own features from the first
+idea to the release and use AI-assisted, spec-driven development (Claude Code) every day.
 
 | | Where | What |
 | --- | --- | --- |
-| **Claims management** | TÜV NORD Group, product kaayo | Backend modules end to end (third-party integrations, mentions, notes), Keycloak login and role- and subscription-based access across API and UI, OCR pipeline sped up from ~30 s to 10-15 s per document, AWS costs cut by 25% with Terraform, observability with Sentry, CloudWatch and Grafana. |
-| **Crypto exchange** | CEX.IO | Two core services, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service found through Grafana. |
-| **Online learning** | Lectrum | Grew from engineer to lead; architecture and core of an in-house LMS on Kubernetes; mentored three client developer teams at a major internet provider. |
+| **Claims-management SaaS** (insurtech) | TÜV NORD Group, product kaayo | Accident-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration over webhooks. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself, by optimising load balancers and RDS in Terraform. Observability with Sentry, CloudWatch and Grafana. |
+| **Crypto exchange** | CEX.IO | Two core services, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
+| **Online learning** | Lectrum | Grew from engineer to architecture lead; architecture and core of an in-house LMS on Kubernetes, GraphQL API; mentored three client developer teams at a major internet provider. |
 
 Production code is under NDA, so the repositories below show how I think and build.
 
@@ -25,25 +59,25 @@ Production code is under NDA, so the repositories below show how I think and bui
 | Project | What it shows | Status |
 | --- | --- | --- |
 | [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. | Lab project, not production |
-| [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, consumer-lag dashboard, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. | Lab project, not production |
+| [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. | Lab project, not production |
+| [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. | Reference implementation |
 | [**Flagboard**](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4, PostgreSQL. | Portfolio project, not deployed |
-| [**normkompass**](https://github.com/sotream/normkompass) | RAG with verifiable citations over German federal law: every answer cites the exact passage (for example "§ 14 Abs. 1 UStG") or refuses. Citation quotes are checked in code against the retrieved text. Hybrid search (pgvector + full-text) with a published retrieval eval, including its weak spots. Written by Claude under my review with spec-driven development (OpenSpec), decisions in ADRs. TypeScript, NestJS, PostgreSQL. | Reference implementation, not a finished product |
-| **Agent Lab** | Agent loop with an MCP server and client, a per-tool trust policy, opt-in writes and its own agent evals. | Private, code on request |
 
 Also public: [nest-next-starter](https://github.com/sotream/nest-next-starter) (fullstack monorepo foundation)
 and [nest-next-aws-cdk](https://github.com/sotream/nest-next-aws-cdk) (AWS CDK deployment of it on ECS Fargate).
 
 ## Working with AI agents
 
-The projects above were built with AI assistance (Claude Code): spec first, small tasks with tests, one commit per
-task, then CI and my own review. Design decisions are written down as ADRs where available.
+The projects above were built with Claude Code under my review: spec first, small tasks with tests,
+one commit per task, then CI and my own review. Design decisions are written down as ADRs.
 
 ## Stack
 
 | | |
 | --- | --- |
-| **Backend** | Node.js, NestJS, REST, GraphQL, WebSocket, Keycloak, OAuth 2.0 / OIDC |
+| **Backend** | Node.js, TypeScript, NestJS, REST, GraphQL, WebSocket, microservices, Keycloak, OAuth 2.0 / OIDC |
 | **Frontend** | Vue 3, Nuxt, React, Next.js, TanStack Query, Tailwind CSS |
-| **Data** | PostgreSQL, Redis, MongoDB, RabbitMQ, Bull. Kafka in side projects |
+| **Data** | PostgreSQL, Redis, MongoDB, RabbitMQ, Bull. Kafka and pgvector in side projects |
+| **AI** | LLM-based document processing (Mistral) in production; RAG and evals in side projects; Claude Code daily |
 | **Infrastructure** | AWS (ECS, RDS, S3), Docker, Kubernetes, Terraform, AWS CDK, GitHub Actions |
 | **Quality and observability** | Jest, Playwright, JMeter, Sentry, Grafana. OpenTelemetry and Prometheus in side projects |
