@@ -56,12 +56,14 @@ Production code is under NDA, so the repositories below show how I think and bui
 
 ## Projects
 
-| Project | What it shows | Status |
-| --- | --- | --- |
-| [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. | Lab project, not production |
-| [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. | Lab project, not production |
-| [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. | Reference implementation |
-| [**Flagboard**](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4, PostgreSQL. | Portfolio project, not deployed |
+| Project | What it shows |
+| --- | --- |
+| [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. |
+| [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. |
+| [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. |
+| [**Flagboard**](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4, PostgreSQL. |
+
+All four are side projects, not production systems.
 
 Also public: [nest-next-starter](https://github.com/sotream/nest-next-starter) (fullstack monorepo foundation)
 and [nest-next-aws-cdk](https://github.com/sotream/nest-next-aws-cdk) (AWS CDK deployment of it on ECS Fargate).
