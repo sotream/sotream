@@ -27,11 +27,12 @@ in Hamburg or remote within Germany.
 
 I want the next role to make me a stronger engineer, not just give me a new title:
 
-- **Deeper backend work:** distributed and event-driven systems, data, reliability under real load.
+- **Distributed and event-driven systems:** data, consistency and reliability under real load. In production
+  I built this at moderate scale; the labs below go further, and I want to go deeper on the job.
 - **System-level decisions:** owning the design of services, on the way to a Staff or architect role
   as an individual contributor.
-- **LLM features in the product,** not only in my own workflow.
 - **A strong team:** engineers I can learn from, honest code review, decisions written down.
+- **Nice to have:** LLM features in the product, not only in my own workflow.
 
 Fintech, insurtech and regulated domains are close to my experience, but the problem and the team
 matter more to me than the domain.
@@ -48,8 +49,8 @@ idea to the release and use AI-assisted, spec-driven development (Claude Code) e
 
 | | Where | What |
 | --- | --- | --- |
-| **Claims-management SaaS** (insurtech) | TÜV NORD Group, product kaayo | Accident-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration over webhooks. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself, by optimising load balancers and RDS in Terraform. Observability with Sentry, CloudWatch and Grafana. |
-| **Crypto exchange** | CEX.IO | Two core services, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
+| **Claims-management SaaS** (insurtech) | TÜV NORD Group, product kaayo | Accident-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration (an export that locks the case, with payments and statuses coming back over webhooks). @mentions and in-app notifications: my design and specification, code written by Claude Code, then team review. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform, with one shared load balancer per account and removal of unused resources. Observability with Sentry, CloudWatch and Grafana. |
+| **Crypto exchange** | CEX.IO | Two core services, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
 | **Online learning** | Lectrum | Grew from engineer to architecture lead; architecture and core of an in-house LMS on Kubernetes, GraphQL API; mentored three client developer teams at a major internet provider. |
 
 Production code is under NDA, so the repositories below show how I think and build.
@@ -58,11 +59,11 @@ Production code is under NDA, so the repositories below show how I think and bui
 
 | Project | What it shows |
 | --- | --- |
-| [**boxoffice-lab**](https://github.com/sotream/boxoffice-lab) | Design playbook for workload-driven architecture: a ticket flash sale across six NestJS/Fastify services, capacity formulas, 15 ADRs, k6-measured numbers, failure drills, and invariant tests (no seat sold twice, no double charge) that survive `kill -9`. PostgreSQL, Redis, Kafka API. |
-| [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. |
+| [**boxoffice-lab**](https://github.com/sotream/boxoffice-lab) | Design playbook for workload-driven architecture: a ticket flash sale across six NestJS/Fastify services, capacity formulas, 17 ADRs, k6-measured numbers, failure drills, and invariant tests (no seat sold twice, no double charge) that survive `kill -9`. PostgreSQL, Redis, Redpanda (Kafka API). |
 | [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. |
-| [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. |
+| [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. |
 | [**Flagboard**](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4, PostgreSQL. |
+| [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. |
 
 All five are side projects, not production systems.
 
@@ -81,6 +82,6 @@ one commit per task, then CI and my own review. Design decisions are written dow
 | **Backend** | Node.js, TypeScript, NestJS, REST, GraphQL, WebSocket, microservices, Keycloak, OAuth 2.0 / OIDC |
 | **Frontend** | Vue 3, Nuxt, React, Next.js, TanStack Query, Tailwind CSS |
 | **Data** | PostgreSQL, Redis, MongoDB, RabbitMQ, Bull. Kafka and pgvector in side projects |
-| **AI** | LLM-based document processing (Mistral) in production; RAG and evals in side projects; Claude Code daily |
+| **AI** | LLM-based document processing (Mistral) in production; RAG in a side project; Claude Code daily |
 | **Infrastructure** | AWS (ECS, RDS, S3), Docker, Kubernetes, Terraform, AWS CDK, GitHub Actions |
 | **Quality and observability** | Jest, Playwright, JMeter, Sentry, Grafana. OpenTelemetry and Prometheus in side projects |
