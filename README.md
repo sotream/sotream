@@ -35,7 +35,7 @@ I want the next role to make me a stronger engineer, not just give me a new titl
 - **A strong team:** engineers I can learn from, honest code review, decisions written down.
 - **Nice to have:** LLM features in the product, not only in my own workflow.
 
-Fintech, insurtech and regulated domains are close to my experience, but the problem and the team
+Fintech, claims handling and regulated domains are close to my experience, but the problem and the team
 matter more to me than the domain.
 
 ## What I bring
@@ -45,14 +45,15 @@ Before that, nine years of third-line production support at two banks in Ukraine
 SWIFT, Bloomberg, Reuters): incident analysis, configuration and access rights on systems that must
 not go down. That is where my habits around reliability and observability come from.
 
-Backend first: **Node.js, TypeScript, NestJS, PostgreSQL**, with Vue and React frontends on AWS. I own features from the first
-idea to the release and use AI-assisted, spec-driven development (Claude Code) every day.
+Backend first: **Node.js, TypeScript, NestJS, PostgreSQL**, with Vue and React on the frontend, running on AWS.
+I take features from the first idea to production: design, backend, frontend, and monitoring after the
+release. I work spec-first with Claude Code, and every change still goes through code review.
 
 | | Where | What |
 | --- | --- | --- |
-| **Claims-management SaaS** (insurtech) | TÜV NORD Group, product kaayo | Damage-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration (an export that locks the case, with payments and statuses coming back over webhooks). @mentions and in-app notifications: my design and specification, code written by Claude Code, then team review. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform, with one shared load balancer per account and removal of unused resources. Observability with Sentry, CloudWatch and Grafana. |
+| **Claims-management SaaS** (automotive) | TÜV NORD Group, product kaayo | Damage-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration (an export that locks the case, with payments and statuses coming back over webhooks). @mentions and in-app notifications: my design and specification, code written by Claude Code, then team review. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform, with one shared load balancer per account and removal of unused resources. Observability with Sentry, CloudWatch and Grafana. |
 | **Crypto exchange** | CEX.IO | Two services I built and owned, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
-| **Online learning** | Lectrum | Grew from engineer to architecture lead; architecture and core of an in-house LMS on Kubernetes, GraphQL API; mentored three client developer teams at a major internet provider. |
+| **Online learning** | Lectrum | Software engineer, promoted to Lead Software Engineer in 2020. Owned the architecture of the in-house LMS core and set up its Kubernetes cluster; GraphQL API. Mentored three client developer teams at a major internet provider. |
 
 Production code is under NDA, so the repositories below show how I think and build.
 
