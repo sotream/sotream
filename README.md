@@ -28,7 +28,8 @@ in Hamburg or remote within Germany.
 I want the next role to make me a stronger engineer, not just give me a new title:
 
 - **Distributed and event-driven systems:** data, consistency and reliability under real load. In production
-  I built this at moderate scale; the labs below go further, and I want to go deeper on the job.
+  I worked with parts of this at small scale: several instances sharing work, at-least-once delivery,
+  cache invalidation. The labs below go further, and I want to go deeper on the job.
 - **System-level decisions:** owning the design of services and the trade-offs behind them, and
   growing into broader architecture work as an individual contributor.
 - **A strong team:** engineers I can learn from, honest code review, decisions written down.
@@ -50,7 +51,7 @@ idea to the release and use AI-assisted, spec-driven development (Claude Code) e
 | | Where | What |
 | --- | --- | --- |
 | **Claims-management SaaS** (insurtech) | TÜV NORD Group, product kaayo | Accident-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration (an export that locks the case, with payments and statuses coming back over webhooks). @mentions and in-app notifications: my design and specification, code written by Claude Code, then team review. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform, with one shared load balancer per account and removal of unused resources. Observability with Sentry, CloudWatch and Grafana. |
-| **Crypto exchange** | CEX.IO | Two core services, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
+| **Crypto exchange** | CEX.IO | Two services I built and owned, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
 | **Online learning** | Lectrum | Grew from engineer to architecture lead; architecture and core of an in-house LMS on Kubernetes, GraphQL API; mentored three client developer teams at a major internet provider. |
 
 Production code is under NDA, so the repositories below show how I think and build.
@@ -83,5 +84,5 @@ one commit per task, then CI and my own review. Design decisions are written dow
 | **Frontend** | Vue 3, Nuxt, React, Next.js, TanStack Query, Tailwind CSS |
 | **Data** | PostgreSQL, Redis, MongoDB, RabbitMQ, Bull. Kafka and pgvector in side projects |
 | **AI** | LLM-based document processing (Mistral) in production; RAG in a side project; Claude Code daily |
-| **Infrastructure** | AWS (ECS, RDS, S3), Docker, Kubernetes, Terraform, AWS CDK, GitHub Actions |
+| **Infrastructure** | AWS (ECS, RDS, S3), Docker, Kubernetes, Terraform, GitHub Actions; AWS CDK in a side project |
 | **Quality and observability** | Jest, Playwright, JMeter, Sentry, Grafana. OpenTelemetry and Prometheus in side projects |
