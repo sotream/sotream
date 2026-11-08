@@ -59,17 +59,18 @@ Production code is under NDA, so the repositories below show how I think and bui
 
 ## Projects
 
-Start with boxoffice-lab: its README [maps every design question to a decision and a measured number](https://github.com/sotream/boxoffice-lab#question-service-decision-number).
+Start with evcharge-lab: its README maps [each service to the system-design question it answers](https://github.com/sotream/evcharge-lab#the-system-design-question-each-service-answers) and lists the [distributed-systems guarantees](https://github.com/sotream/evcharge-lab#distributed-systems-guarantees) with the drill that tests each one.
 
 | Project | What it shows |
 | --- | --- |
+| [**evcharge-lab**](https://github.com/sotream/evcharge-lab) | EV charging platform (charge point operator side) as a system-design lab: seven NestJS and Go services, an OCPP WebSocket gateway driven by a station simulator, Kafka in KRaft mode (3 brokers), TimescaleDB, a Postgres read replica with read-your-writes by LSN. 18 ADRs against an explicit load model and SLOs; failure drills with saved raw output (broker loss, KRaft quorum loss, replica lag, reconnect storm, offline replay); missed targets stay visible as missed. NestJS, Go, PostgreSQL, Kafka, Redis. |
 | [**boxoffice-lab**](https://github.com/sotream/boxoffice-lab) | Design playbook for workload-driven architecture: a ticket flash sale across six NestJS/Fastify services, capacity formulas, 17 ADRs, k6-measured numbers, failure drills, and invariant tests (no seat sold twice, no double charge) that survive `kill -9`. PostgreSQL, Redis, Redpanda (Kafka API). |
 | [**Kafka Pay Lab**](https://github.com/sotream/kafka-pay-lab) | Transactional outbox, idempotency keys, circuit breaker, retries, dead-letter topic, OpenTelemetry tracing in Grafana. NestJS, Next.js, Kafka. |
 | [**Access Control Lab**](https://github.com/sotream/access-control-lab) | OIDC + PKCE on Keycloak, RBAC + ABAC, Postgres row-level security, tamper-evident audit log, 63 attack tests. NestJS, Next.js. |
 | [**Flagboard**](https://github.com/sotream/nuxt-flagboard) | Feature-flag service: percentage rollouts, targeting rules, audit log, typed SDK. NestJS, Nuxt 4, PostgreSQL. |
 | [**normkompass**](https://github.com/sotream/normkompass) | RAG over German federal law that answers only with citations checked in code, or refuses. Hybrid search (pgvector + full-text) with a published retrieval eval. NestJS, PostgreSQL. |
 
-All five are side projects, not production systems.
+All six are side projects, not production systems.
 
 Also public: [nest-next-starter](https://github.com/sotream/nest-next-starter) (fullstack monorepo foundation)
 and [nest-next-aws-cdk](https://github.com/sotream/nest-next-aws-cdk) (AWS CDK deployment of it on ECS Fargate).
