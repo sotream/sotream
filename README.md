@@ -51,13 +51,15 @@ release. I work spec-first with Claude Code, and every change still goes through
 
 | | Where | What |
 | --- | --- | --- |
-| **Claims-management SaaS** (automotive) | TÜV NORD Group, product kaayo | Damage-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end, including a two-way CRM sync (Pipedrive) and a lawyer-service integration (an export that locks the case, with payments and statuses coming back over webhooks). @mentions and in-app notifications: my design and specification, code written by Claude Code, then team review. Keycloak login and role- and subscription-based access across API and UI. In a team of five: an LLM-based OCR pipeline (PaddleOCR + Mistral), from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform, with one shared load balancer per account and removal of unused resources. Observability with Sentry, CloudWatch and Grafana. |
-| **Crypto exchange** | CEX.IO | Two services I built and owned, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in a service, found through Grafana. |
+| **Claims-management SaaS** (automotive) | TÜV NORD Group, product kaayo | Damage-claims SaaS for workshops, surveyors and lawyers. Shared responsibility for the architecture; I own several backend modules end to end. Two-way CRM sync (Pipedrive): sales no longer enter changes twice. Lawyer-service integration: an export that locks the case, with payments and statuses coming back over webhooks. In-app notifications after lawyers missed emails the provider reported as delivered (my design and specification, code written by Claude Code): no further complaints after release. In a team of five: LLM-based OCR, from ~30 s to 10-15 s per document. Cut AWS costs by 25% myself in Terraform. |
+| **Crypto exchange** | CEX.IO | Two services I built and owned, Price Alerts (NestJS, PostgreSQL, Redis, Kubernetes) and Staking/Savings (Node.js), plus an internal admin app. Price Alerts: matching on candle high/low, instances share the work through Postgres row locks (`SKIP LOCKED`) with no broker, at-least-once delivery. Cut internal ledger entries per order or transfer from 10-15 to 2-4. Fixed unbounded memory growth in Staking, found through Grafana (24 h TTL, 1,000-entry cap, RabbitMQ invalidation): restarts stopped. |
 | **Online learning** | Lectrum | Software engineer, promoted to Lead Software Engineer in 2020. Owned the architecture of the in-house LMS core and set up its Kubernetes cluster; GraphQL API. Mentored three client developer teams at a major internet provider. |
 
 Production code is under NDA, so the repositories below show how I think and build.
 
 ## Projects
+
+Start with boxoffice-lab: its README [maps every design question to a decision and a measured number](https://github.com/sotream/boxoffice-lab#question-service-decision-number).
 
 | Project | What it shows |
 | --- | --- |
