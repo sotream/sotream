@@ -29,8 +29,8 @@ I want the next role to make me a stronger engineer, not just give me a new titl
 
 - **Distributed and event-driven systems:** data, consistency and reliability under real load. In production
   I built this at moderate scale; the labs below go further, and I want to go deeper on the job.
-- **System-level decisions:** owning the design of services, on the way to a Staff or architect role
-  as an individual contributor.
+- **System-level decisions:** owning the design of services and the trade-offs behind them, and
+  growing into broader architecture work as an individual contributor.
 - **A strong team:** engineers I can learn from, honest code review, decisions written down.
 - **Nice to have:** LLM features in the product, not only in my own workflow.
 
