@@ -85,7 +85,7 @@ one commit per task, then CI and my own review. Design decisions are written dow
 | Area | Technologies |
 | --- | --- |
 | **Backend** | Node.js, TypeScript, NestJS, REST, GraphQL, WebSocket, microservices, Keycloak, OAuth 2.0 / OIDC |
-| **Frontend** | Vue 3, Nuxt, React, Next.js, TanStack Query, Tailwind CSS |
+| **Frontend** | Vue 3, Nuxt, React, Next.js, TanStack Query, Tailwind CSS. Micro frontends (Module Federation 2, Rspack) in a side project |
 | **Data** | PostgreSQL, Redis, MongoDB, RabbitMQ, Bull. Kafka and pgvector in side projects |
 | **AI** | LLM-based document processing (Mistral) in production; RAG in a side project; Claude Code daily |
 | **Infrastructure** | AWS (ECS, RDS, S3), Docker, Kubernetes, Terraform, GitHub Actions; AWS CDK in a side project |
